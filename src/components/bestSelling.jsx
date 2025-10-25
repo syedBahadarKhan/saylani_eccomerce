@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { useCart } from "../context/Cartcontext"; // ✅ make sure the path matches your file name
 
 const BestSelling = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { addToCart } = useCart(); // ✅ use your existing context
 
   // Fetch product data from API
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
       .then((data) => {
-        // Select top 6 as "best selling"
         const topProducts = data.slice(0, 6);
         setProducts(topProducts);
         setLoading(false);
@@ -47,7 +48,7 @@ const BestSelling = () => {
               <motion.div
                 key={product.id}
                 whileHover={{ scale: 1.05 }}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 p-5 flex flex-col items-center"
+                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 p-5 flex flex-col items-center mt-10"
               >
                 <img
                   src={product.image}
@@ -60,7 +61,10 @@ const BestSelling = () => {
                 <p className="text-blue-600 font-bold text-lg mb-3">
                   ${product.price}
                 </p>
-                <button className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition duration-300">
+                <button
+                  onClick={() => addToCart(product)} // ✅ this adds to cart
+                  className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition duration-300"
+                >
                   Add to Cart
                 </button>
               </motion.div>
