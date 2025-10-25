@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
 import Categories from "./components/Categories.jsx";
+import BestSelling from "./components/bestSelling.jsx";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <CartProvider>
         <Header />
         <Routes>
-        <Route path="/" element={ <> <Hero /> <Categories /> </> }/>
+        <Route path="/" element={ <> <Hero /> <Categories /> <BestSelling/> </> }/>
           <Route path="/products" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/cart" element={<Cart />} />
