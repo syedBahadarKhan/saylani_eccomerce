@@ -41,9 +41,9 @@ const Footer = () => {
           <h3 className="text-lg font-semibold text-white mb-3">Stay Connected</h3>
           <p className="text-sm mb-3">Follow us on social media for updates & deals!</p>
           <div className="flex space-x-4 mb-4">
-            <a href="#" className="hover:text-blue-500 transition"><FaFacebook size={20} /></a>
-            <a href="#" className="hover:text-pink-500 transition"><FaInstagram size={20} /></a>
-            <a href="#" className="hover:text-sky-400 transition"><FaTwitter size={20} /></a>
+            <a href="https://www.facebook.com/share/1BZiViP75E/" className="hover:text-blue-500 transition"><FaFacebook size={20} /></a>
+            <a href="/" className="hover:text-pink-500 transition"><FaInstagram size={20} /></a>
+            <a href="https://github.com/syedBahadarKhan" className="hover:text-sky-400 transition"><FaTwitter size={20} /></a>
             <a href="https://github.com/" target="_blank" rel="noreferrer" className="hover:text-gray-400 transition"><FaGithub size={20} /></a>
           </div>
 
