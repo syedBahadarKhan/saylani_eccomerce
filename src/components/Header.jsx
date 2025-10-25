@@ -31,15 +31,15 @@ const Header = () => {
             Home
           </NavLink>
 
-          <NavLink
-            to="/checkout"
+            <NavLink
+            to="/about"
             className={({ isActive }) =>
               `hover:text-blue-600 transition duration-200 ${
                 isActive ? "text-blue-600 font-semibold" : "text-gray-700"
               }`
             }
           >
-            Checkout
+            About Us
           </NavLink>
 
           <NavLink
@@ -54,15 +54,19 @@ const Header = () => {
           </NavLink>
 
           <NavLink
-            to="/about"
+            to="/checkout"
             className={({ isActive }) =>
               `hover:text-blue-600 transition duration-200 ${
                 isActive ? "text-blue-600 font-semibold" : "text-gray-700"
               }`
             }
           >
-            About Us
+            Checkout
           </NavLink>
+
+          
+
+        
 
           <NavLink
             to="/cart"
