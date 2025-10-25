@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <section className="bg-gradient-to-r from-blue-50 via-white to-blue-100 py-10 md:py-20">
-      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div className="max-w-6xl mx-auto px-3 flex flex-col md:flex-row items-center justify-between gap-8">
         {/* Left Side: Text */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -14,7 +14,7 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="flex-1 text-center md:text-left space-y-5"
         >
-          <h3 className="text-4xl md:text-7xl font-extrabold text-gray-800 leading-tight">
+          <h3 className="text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight">
             Discover the <span className="text-blue-600">Best Products</span>
             <br /> For Your Lifestyle 🛒
           </h3>
